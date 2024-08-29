@@ -7,4 +7,42 @@ body {
   margin: 0;
   background-color: #1e1d20;
   color: #ede8f7;
+  font-family: Cambria, Cochin, Georgia, 'Times New Roman', Times, serif;
+  font-size: 20px;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1,
+h2 {
+  font-size: 4rem;
+  font-style: italic;
+  font-weight: 100;
+  margin: 0;
+}
+
+p, em{
+  margin-bottom: 1rem;
+}
+
+.grid-layout {
+  display: grid;
+  grid-template-columns: 10rem 1fr;
+  height: 100vh;
+  grid-template-areas: 
+    "hero hero"
+    "sidebar content"
+    "footer footer";
+  grid-template-rows: auto 1fr auto;
+  grid-gap: 1rem;
+}
+
+app-header {
+  border-bottom: 3px solid  #b700ff;
+  padding: 1rem .5rem;
+  /* -webkit-linear-gradient(45deg, #f9096d, #b700ff) */
+
+  grid-area: hero;
 }
