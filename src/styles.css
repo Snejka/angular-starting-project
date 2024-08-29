@@ -46,3 +46,7 @@ app-header {
 
   grid-area: hero;
 }
+
+app-sidebar {
+  grid-area: sidebar;
+}
