@@ -15,4 +15,9 @@ export class SidebarComponent {
   get url () {
     return 'https://angular.dev' + this.tutsData.url;
   } 
+
+  toggleNav() {
+    const randomIndex = Math.floor(Math.random() * TUTS_DATA.length);
+    this.tutsData = TUTS_DATA[randomIndex];
+  }
 }
