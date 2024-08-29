@@ -2,9 +2,9 @@
     <button (click)="toggleNav()">Tutorials:</button>
     <ul>
         <!-- Property binding and reference data -->
-        <li [id]="tutsData.id">
+        <li [id]="tutsData().id">
             <a [href]="url" target="_blank">
-                {{ tutsData.title }}
+                {{ tutsData().title }}
             </a>
         </li>
     </ul>

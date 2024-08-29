@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 import { TUTS_DATA } from '../mocked-data';
 
@@ -10,7 +10,7 @@ import { TUTS_DATA } from '../mocked-data';
   styleUrl: './sidebar.component.css'
 })
 export class SidebarComponent {
-  tutsData = TUTS_DATA[0];
+  tutsData = signal(TUTS_DATA[0]);
 
   get url () {
     return 'https://angular.dev' + this.tutsData.url;
@@ -18,6 +18,6 @@ export class SidebarComponent {
 
   toggleNav() {
     const randomIndex = Math.floor(Math.random() * TUTS_DATA.length);
-    this.tutsData = TUTS_DATA[randomIndex];
+    this.tutsData.set( TUTS_DATA[randomIndex] );
   }
 }
