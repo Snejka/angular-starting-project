@@ -1,8 +1,10 @@
 <nav class="main-nav">
     <ul>
-        <li><a href="https://angular.dev/tutorials">Tutorials</a></li>
-        <li><a href="https://angular.dev/tutorials">Tutorials</a></li>
-        <li><a href="https://angular.dev/tutorials">Tutorials</a></li>
-        <li><a href="https://angular.dev/tutorials">Tutorials</a></li>
+        <!-- Property binding and reference data -->
+        <li [id]="tutsData.id">
+            <a [href]="url" target="_blank">
+                {{ tutsData.title }}
+            </a>
+        </li>
     </ul>
 </nav>

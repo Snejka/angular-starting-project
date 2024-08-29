@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+import { TUTS_DATA } from '../mocked-data';
+
 @Component({
   selector: 'app-sidebar',
   standalone: true,
@@ -8,5 +10,9 @@ import { Component } from '@angular/core';
   styleUrl: './sidebar.component.css'
 })
 export class SidebarComponent {
+  tutsData = TUTS_DATA[0];
 
+  get url () {
+    return 'https://angular.dev' + this.tutsData.url;
+  } 
 }
