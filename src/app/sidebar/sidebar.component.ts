@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, computed } from '@angular/core';
 
 import { TUTS_DATA } from '../mocked-data';
 
@@ -12,9 +12,7 @@ import { TUTS_DATA } from '../mocked-data';
 export class SidebarComponent {
   tutsData = signal(TUTS_DATA[0]);
 
-  get url () {
-    return 'https://angular.dev' + this.tutsData().url;
-  } 
+  computedURL = computed( () => 'https://angular.dev' + this.tutsData().url );
 
   toggleNav() {
     const randomIndex = Math.floor(Math.random() * TUTS_DATA.length);
