@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 
-import { HeaderComponent } from './header.component';
+import { HeaderComponent } from './header/header.component';
 // TypeScript Decorator
 // Add extra data
+
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -10,4 +11,5 @@ import { HeaderComponent } from './header.component';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
+
 export class AppComponent {}
