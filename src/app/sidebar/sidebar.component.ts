@@ -13,7 +13,7 @@ export class SidebarComponent {
   tutsData = signal(TUTS_DATA[0]);
 
   get url () {
-    return 'https://angular.dev' + this.tutsData.url;
+    return 'https://angular.dev' + this.tutsData().url;
   } 
 
   toggleNav() {
